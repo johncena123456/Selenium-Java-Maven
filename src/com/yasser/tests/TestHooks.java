@@ -18,11 +18,11 @@ public abstract class TestHooks {
 	@BeforeTest
 	@Parameters({ "url" })
 	public void setup(String url) {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		options.setBinary("./drivers/chromerdriver");
-		options.addArguments("window-size=1200x600");
-		WebDriver driver = new ChromeDriver(options);
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("--headless");
+		//options.setBinary("./drivers/chromerdriver");
+		//options.addArguments("window-size=1200x600");
+		WebDriver driver = new ChromeDriver();
 		page = new Page(driver);
 		page.navigate(url);
 	}
